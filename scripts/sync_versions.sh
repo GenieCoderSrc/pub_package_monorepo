@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Configuration
-ROOT_DIR="/Users/shoikat/Developer/FlutterDev/src/flutter_src/genie_coder_monorepo"
+ROOT_DIR="/Users/shoikat/Developer/FlutterDev/src/flutter_src/pub_package_monorepo"
 DATE=$(date +"%b %d, %Y")
 
 echo "🚀 Starting Monorepo Version & Changelog Sync..."

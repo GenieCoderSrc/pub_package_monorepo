@@ -1,5 +1,5 @@
-name: genie_coder_monorepo
-repository: https://github.com/GenieCoderSrc/genie_coder_monorepo
+name: pub_package_monorepo
+repository: https://github.com/GenieCoderSrc/pub_package_monorepo
 
 packages:
   - "packages/**"

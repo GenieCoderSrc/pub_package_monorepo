@@ -1,4 +1,4 @@
-name: genie_coder_monorepo
+name: pub_package_monorepo
 description: Genie Coder Dart/Flutter package monorepo
 version: 0.0.1
 publish_to: "none"

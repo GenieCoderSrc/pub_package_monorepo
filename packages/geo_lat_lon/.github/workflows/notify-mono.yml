@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Send repository dispatch to mono repo
         run: |
-          MONO_REPO="GenieCoderSrc/genie_coder_monorepo"
+          MONO_REPO="GenieCoderSrc/pub_package_monorepo"
 
           echo "📢 Sending repository_dispatch to $MONO_REPO ..."
 
