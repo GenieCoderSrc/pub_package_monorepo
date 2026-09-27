@@ -1,5 +1,13 @@
 # 📦 Changelog - geo_lat_lon
 
+## 0.0.7
+
+### Sep 26, 2026
+
+### ✨ Updated
+
+- Updated `cloud_firestore: ^6.10.0`
+
 ## 0.0.6
 
 ### Jun 15, 2026
