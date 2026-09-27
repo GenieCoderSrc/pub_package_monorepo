@@ -2,3 +2,4 @@ analyzer:
   exclude:
     - "packages/**/build/**"
     - "packages/**/.dart_tool/**"
+    - build/**
