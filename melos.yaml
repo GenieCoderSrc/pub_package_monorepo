@@ -2,7 +2,7 @@ name: pub_package_monorepo
 repository: https://github.com/GenieCoderSrc/pub_package_monorepo
 
 packages:
-  - "packages/**"
+  - "packages/*"
 
 ignore:
   - "packages/**/build/**"
@@ -13,9 +13,9 @@ ignore:
 # -----------------------------
 command:
   version:
-    linkToCommits: true
-    updateGitTagRefs: true
-    workspaceChangelog: false   # automatically update CHANGELOG.md for each package
+    linkToCommits: false        # <-- Change this to false for manual version control
+    updateGitTagRefs: false     # <-- Since you are handling versions manually
+    workspaceChangelog: false
 
   bootstrap:
     runPubGetInParallel: true
