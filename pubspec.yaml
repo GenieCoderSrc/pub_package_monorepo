@@ -4,26 +4,40 @@ version: 0.0.1
 publish_to: "none"
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
-#  sdk: ^3.9.0
-#  flutter: ">=3.0.0"
+  sdk: '>=3.11.0 <4.0.0' # Updated to support glob workspace syntax
 
-#  sdk: ">=3.8.0 <4.0.0"
-#  flutter: ">=1.17.0"
-
-#workspace:
-#  - packages/
+workspace:
+  - packages/*
 
 dependencies:
   flutter:
     sdk: flutter
 
-#  # Shared dependencies across all packages
-#  cloud_firestore: ^6.0.0
-#
-#dependency_overrides:
-#  cloud_firestore: ^6.0.0
-
 dev_dependencies:
   melos: ^8.9.0
-#  melos: ^7.1.0
+
+melos:
+  repository: https://github.com/GenieCoderSrc/pub_package_monorepo
+
+  ignore:
+    - "packages/**/build/**"
+    - "packages/**/.dart_tool/**"
+
+  command:
+    version:
+      linkToCommits: false
+      updateGitTagRefs: false
+      workspaceChangelog: false
+
+    bootstrap:
+      runPubGetInParallel: true
+
+  scripts:
+    analyze:
+      run: flutter analyze
+
+    format:
+      run: dart format .
+
+    test:
+      run: flutter test --coverage
