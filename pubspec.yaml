@@ -4,26 +4,98 @@ version: 0.0.1
 publish_to: "none"
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
-#  sdk: ^3.9.0
-#  flutter: ">=3.0.0"
+  sdk: '>=3.6.0 <4.0.0' # Pub workspaces require Dart SDK >= 3.6.0
 
-#  sdk: ">=3.8.0 <4.0.0"
-#  flutter: ">=1.17.0"
-
-#workspace:
-#  - packages/
+workspace:
+  - packages/app_color_parser
+  - packages/app_date_picker
+  - packages/app_drop_down_menu
+  - packages/app_float_button
+  - packages/app_info_smart_unit
+  - packages/app_ritch_txt
+  - packages/app_sliver
+  - packages/app_style
+  - packages/app_toast
+  - packages/bottom_navigation
+  - packages/builder_state
+  - packages/dart_data_type_parser
+  - packages/data_parser
+  - packages/date_time_converter
+  - packages/exception_type
+  - packages/fire_base_real_time_db
+  - packages/fire_storage_impl
+  - packages/firestore_db_impl
+  - packages/geo_lat_lon
+  - packages/get_it_di_global_variable
+  - packages/i_tdd
+  - packages/i_validator
+  - packages/icon_data_generator
+  - packages/icon_data_parser
+  - packages/image_core
+  - packages/image_picker_adapter
+  - packages/image_uploader
+  - packages/json_list_data_parser
+  - packages/language_translator
+  - packages/loading_builder
+  - packages/loading_state
+  - packages/local_data_impl
+  - packages/location_crud_service
+  - packages/location_reader
+  - packages/navigation_without_context
+  - packages/online_indicator
+  - packages/rest_api_impl
+  - packages/reusable_app_bar
+  - packages/reusable_bottom_sheet
+  - packages/reusable_button
+  - packages/reusable_dialog
+  - packages/reusable_editor
+  - packages/reusable_icon
+  - packages/reusable_image_widget
+  - packages/reusable_list_item
+  - packages/reusable_list_view
+  - packages/reusable_speed_dial
+  - packages/reusable_switch_btn
+  - packages/reusable_tab_bar
+  - packages/rounded_scaffold_body
+  - packages/state_msg_builder
+  - packages/submission_state
+  - packages/tag_builder
+  - packages/text_field_builder
+  - packages/theme_setting
+  - packages/upload_progress_indicator
 
 dependencies:
   flutter:
     sdk: flutter
 
-#  # Shared dependencies across all packages
-#  cloud_firestore: ^6.0.0
-#
-#dependency_overrides:
-#  cloud_firestore: ^6.0.0
-
 dev_dependencies:
   melos: ^8.9.0
-#  melos: ^7.1.0
+
+# -----------------------------
+# Melos Configuration (Moved from melos.yaml)
+# -----------------------------
+melos:
+  repository: https://github.com/GenieCoderSrc/pub_package_monorepo
+
+  ignore:
+    - "packages/**/build/**"
+    - "packages/**/.dart_tool/**"
+
+  command:
+    version:
+      linkToCommits: false
+      updateGitTagRefs: false
+      workspaceChangelog: false
+
+    bootstrap:
+      runPubGetInParallel: true
+
+  scripts:
+    analyze:
+      run: flutter analyze
+
+    format:
+      run: dart format .
+
+    test:
+      run: flutter test --coverage
