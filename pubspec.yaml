@@ -4,7 +4,7 @@ version: 0.0.1
 publish_to: "none"
 
 environment:
-  sdk: '>=3.6.0 <4.0.0' # Pub workspaces  require Dart SDK >= 3.6.0
+  sdk: '>=3.6.0 <4.0.0' # Pub workspaces require Dart SDK >= 3.6.0
 
 workspace:
   - packages/app_color_parser
