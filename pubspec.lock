@@ -69,10 +69,10 @@ packages:
     dependency: transitive
     description:
       name: cached_network_image
-      sha256: dd50bb0dfa5d90b071e6b73e91e6d17aac826c2797ee8952c3c800aae56d6a68
+      sha256: "64a6c35e63cfd22865238d11fe8608bb538306ece5b2eb951106280441fdbb0c"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.3"
+    version: "4.0.4"
   cached_network_image_platform_interface:
     dependency: transitive
     description:
